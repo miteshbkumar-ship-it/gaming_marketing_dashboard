@@ -1,0 +1,71 @@
+# Virtual environment folders
+venv/
+env/
+ENV/
+.venv
+
+# Environment variables
+.env
+.env.local
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Model files
+*.pkl
+*.pickle
+*.h5
+*.model
+
+# Streamlit cache
+.streamlit/
+secrets.toml
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Operating System files
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/

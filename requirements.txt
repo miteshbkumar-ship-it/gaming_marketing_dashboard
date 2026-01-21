@@ -5,6 +5,4 @@ seaborn
 plotly
 streamlit
 jupyter
-openpyxl
-scikit-learn
-scipy
+os

@@ -1,18 +1,18 @@
-Gaming Market Dashboard
+# Gaming Market Dashboard
 
-Project overview
+### Project overview
 
 This project analyses video game sales data to help people in the gaming industry decide which games to develop and where to sell them. Around 80% of games don't recover their costs, so effective data analysis is essential.
 
 The dashboard uses sales data from over 22,000 games released between 2010 and 2019. It highlights trends in top-selling games, the best development platforms, and regional differences in game preferences.
 
-Business Problem
+### Business Problem
 
 The gaming industry is worth over £200 billion worldwide, but it is also very risky. Most studios, especially small indie ones, lack the market insights that big publishers have. This means they often have to guess which games to make or which platforms to target.
 
 This project helps close that gap by giving clear, data-driven answers to practical questions. For example, is the shooter genre too crowded? Should I focus on North America or Japan? Do higher critic scores actually lead to better sales?
 
-Target Audience
+### Target Audience
 
 The dashboard is built for several groups of users:
 
@@ -24,7 +24,7 @@ Publishers are deciding which games to sign and how to split marketing budgets a
 
 Investors who want to understand the market before funding game development. The visualisations are easy for non-technical users to follow, but detailed enough for analysts.
 
-Dataset
+### Dataset
 
 I used the "Video Game Sales 2024" dataset for this project. The data were initially collected by ASANICZKA and are available on Kaggle. 
 
@@ -32,13 +32,7 @@ To keep things clear and accurate, I only looked at games released between 2010 
 
 All the data used is public commercial information and does not include any personal details.
 
-
-
-Methodology
-
-Data Collection
-
-I downloaded the data set directly from Kaggle as a CSV file. The source combines VGChartz sales data (a video game sales-tracking website) with Metacritic review scores.
+### Methodology
 
 Data Cleaning
 
@@ -53,7 +47,7 @@ Below are the steps I took to clean the data set:
 
 I excluded data between 2020 and 2024 because there were unusual patterns due to the pandemic and the collected information was incomplete. I chose the period from 2010 to 2019 because it had reliable, consistent information. 
 
-Analysis Approach
+### Analysis Approach
 
 I applied an exploratory data analysis, starting with the main question and investigating further as I progressed to answer the remaining business questions. The analysis was performed entirely on Jupyter notebooks, with the main analysis divided into two notebooks:
 
@@ -86,7 +80,7 @@ The analysis revealed several important insights:
 * Japan prefers role-playing games, while North America and Europe favor shooters and sports games. This affects where to focus marketing and whether to localise games for certain markets. 
 * Games with higher ratings often sell better but the connection isn't strong enough to predict success. Many high scoring games don't sell well and some low scoring games do. Quality matters but marketing and timing are also more important.
 
-How to Run the Dashboard
+### How to Run the Dashboard
 
 1. Install the required packages:
 
@@ -100,13 +94,13 @@ How to Run the Dashboard
 
 For further information, check out Streamlit documentation at https://streamlit.io/
 
-Where AI Helped
+### Where AI Helped
 
 AI helped me with code debugging. When I encountered file path or data type errors, I would paste the error message and ask claude to explain what was wrong and suggest fixes. This saved hours of searching through documentation.
 
 Visualisation code. I knew what charts I wanted but not always the exact Matplotlib or Plotly syntax to create them. Claude provided code examples that I then adapted to my specific data and requirements.
 
-Where I Made My Own Decisions
+### Where I Made My Own Decisions
 
 The entire analytical approach was mine. Claude didn't suggest what questions to ask or what analyses to run. Those came from my understanding of the business problem and what would be useful to the target audience.
 
@@ -114,7 +108,7 @@ All data quality decisions were my own. The decision to exclude data from 2020 t
 
 Dashboard design and user flow was entirely my design. I decided what visualisations to include, how to arrange them and what would make sense to someone using the tool.
 
-Impact on the Project
+### Impact on the Project
 
 Using AI tools made it possible to finish the project on a tight schedule. Without them, I would have spent much more time fixing errors and reading documentation, leaving less time for analysis and insights. AI can help you implement your ideas faster but you still need to understand what you are doing and why. Every piece of code Claude generated, I had to read, understand and check to make sure it did what I wanted. This experience showed me that AI tools are very helpful for data analytics, but they are assistants, not replacements for real analytical thinking.
 
@@ -122,7 +116,7 @@ This project only uses publicly available commercial data. There is no personal 
 
 Under GDPR, this project does not process any personal data, so the main privacy regulations do not apply. The data subjects here are commercial products (games) and companies (publishers and developers), not individuals.
 
-Potential Biases in the Data
+### Potential Biases in the Data
 
 Several biases exist in this dataset that users should be aware of:
 
@@ -135,20 +129,19 @@ Platform bias: Mobile gaming is almost entirely absent from this dataset because
 Temporal bias: More recent years in the dataset tend to have more complete data than older years. This is why I focused on data between 2010 and 2019, rather than trying to analyse all the way back to the 1970s.
 
 
-
-Fairness and Representation
+### Fairness and Representation
 
 The analysis treats all genres and platforms equally in terms of methodology, but the business context means some categories get more attention simply because they represent larger markets. This could reinforce existing industry trends rather than highlighting opportunities in underrepresented areas.
 
 The dashboard doesn’t make recommendations about what games to make, it only presents data. This is deliberate because context matters a lot in game development and what works for one studio might not work for another.
 
-Social Implications
+### Social Implications
 
 There's a risk that data analysis like this could contribute to standardisation in the gaming industry. If everyone looks at the same data and concludes that shooters and action games sell best, we might see even more of those genres and fewer experimental or niche games.
 
 I have addressed this by showing that there is opportunities in less crowded genres and by being open about the data's limits. The goal is to help people make decisions, not to tell them what to do.
 
-Data Limitations
+### Data Limitations
 
 Currently, there is missing critic scores: About 30% of games don't have critic scores, which limits some analyses. These are typically smaller releases that didn't get reviewed by major outlets.
 
@@ -158,21 +151,17 @@ Incomplete recent data: This is why I excluded 2020-2024, but it means the analy
 
 The dataset includes digital sales but doesn't separate them from physical sales. Given the industry's shift to digital, this would have been valuable information.
 
-Alternative Approaches Considered
+### Alternative Approaches Considered
 
 i could have built a machine learning model to predict whether a game would be successful based on its attributes. I chose not to because the available features like genre, platform, publisher etc, aren't enough to make meaningful predictions. Success in gaming depends heavily on factors that are not in the data, for example, marketing budgets, development quality and timing.
 
-
-
-Future Enhancements
+### Future Enhancements
 
 If I were to continue developing this project, I would add more recent data, especially data after 2020, with a specific focus on understanding how the pandemic permanently changed gaming markets. I would include a digital versus physical sales breakdown as this would reveal important trends about distribution channels. 
 
 I would separate indie games from AAA titles, as they operate on different markets. I would build predictive features that lets the users test scenarios like "what if I launch this type of game on this platform in this region?". I would add more granular regional data to break down the "other sales" category and properly represent emerging markets, which include mobile gaming data, to provide a complete picture of the gaming market rather than just console and PC.
 
-
-
-Credits
+### Credits
 
 ASANICZKA. (2024). Video Game Sales 2024 [Data set]. Kaggle. https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024
 
@@ -186,9 +175,7 @@ Industry Context:
 - Newzoo Global Games Market Reports - Industry size and trends
 - Entertainment Software Association (ESA) - Industry statistics and demographics
 
-
-
-Repo Information
+### Repo Information
 
 This project is maintained on GitHub, with regular commits that show the development process. All code is original work created for this capstone project, with AI assistance documented where used.
 
